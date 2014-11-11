@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+
+<head>
+<title>Barbara Kerne Contact</title>
+
+<link
+	href="includes/barbaraKerne.css"
+	rel="stylesheet">
+	
+<script language="JavaScript">
+	
+var M = "ma";
+var L = "lto";
+var B = "art.";
+var K = "info";
+var E = "ecologylab";
+
+function mStr()
+{
+	return B + K + "@" + E+ ".net";
+}
+function m()
+{
+	window.location	= M + "i" + L + ":" + mStr();
+}
+function doM()
+{
+	var mSpan		= document.getElementById("m");
+	mSpan.innerHTML	= mStr();
+}
+</script>
+</head>
+
+<body bgcolor="#ffffff" text="#000000" onload="doM();">
+<div id="rootcontainer">
+<div class="banner">
+  <span class="banner3">Barbara Kerne</span>
+  <span class="banner1">Contact</span>
+</div>
+
+<div class="holder" style="font-size: 17px;">
+For more information, contact
+<br/><br/>
+<a class="ma" href="javascript:m();"><span id="m">&nbsp;</span></a>
+</div>
+
+<div id="bottom">
+<div class="nav_block">
+	<a class="nav" href="index.html">paintings</a>
+	<a class="nav" href="prints.html">prints</a>
+	<a class="nav" href="statement.html">statement</a>
+	<a class="nav" href="cv.html">cv</a>
+	<span class="nav_selected">contact</span>
+</div>
+
+<div id="footer">
+	Copyright 2009 by Barbara Kerne. All rights reserved.
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>

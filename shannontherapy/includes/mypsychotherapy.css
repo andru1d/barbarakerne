@@ -1,0 +1,373 @@
+body
+{ 
+	background-color: #ffffff;
+	background: #ffffff url(../images/1x1.gif) repeat-y 50% 0;
+
+	color: #000000; 
+	font-size: 12px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	vertical-align: top;
+
+	margin: 0px 30px 0px 30px;
+	padding: 0px 0px 0px 0px;
+}
+
+td
+{
+	font-size:	10px;
+	font-weight: bold;
+}
+
+#label
+{
+	font-weight: normal;
+}
+
+p
+{
+	line-height: 150%;
+	font-size: 14px;
+}
+
+.intro
+{
+	line-height: 150%;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+#rootcontainer
+{
+  	background-color: #ffffff; 
+  	background-color: yellow;
+	background: #ffffff url(1x1.gif) repeat-y 50% 0;
+
+	padding: 15px 100px 0px 100px;
+	margin-right: auto;
+	margin-left: auto; 	/* opera does not like 'margin:20px auto' */
+
+	text-align:left; /* part 2 of 2 centering hack */
+
+	width: 818px; /* ie5win fudge begins */
+	height: 100%;
+	
+	padding-bottom: 20px;
+  
+/*	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 618px;
+	height: 160px; */
+	
+	overflow:hidden;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.nav
+{
+	text-align: left;
+	float: left;
+	/* border-right: 5px solid #989898; */
+	margin-right: 20px;
+	top: 10px;
+	left: 10px;
+	width: 125px;
+	height: 930px;
+	padding: 10px;
+	padding-left: 0px;
+	padding-bottom: 40px;
+}
+a.ma
+{
+	margin: 0px;
+	text-decoration: none;
+	color: black;
+}
+.nav_selected
+{
+	margin: 5px;
+	font-weight: bold;
+}
+a:hover.nav
+{
+	font-weight: bold;
+	color: #021E4E;
+}
+
+
+
+a:hover.subnavlink
+{
+  display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+	color: #0D2B50;
+}
+a:hover.navlink
+{
+	color: #0D2B80;
+}
+a.navlink
+{
+	display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+	font-weight: bold;
+	color: #1F664E;
+	color: #243C6D;
+	color: #3F5C87;
+}
+a.navselected
+{
+	display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+	font-weight: bold;
+	color: #555555;
+	color: #666666;
+}
+a.subnavlink
+{
+  display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+	color: #3F5C87;
+}
+a.subnavselected
+{
+  display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+	color: #666666;
+}
+span.lighter
+{
+	color: #666666;
+}
+.nav .block
+{
+	padding-bottom: 15px;
+}
+.nav .subblock
+{
+	padding-top: 5px;
+	padding-bottom: 4px;
+}
+
+
+ul
+{
+	margin-top: 6px;
+	margin-bottom: 8px;
+	margin-left: 60px;
+}
+
+.destination
+{
+	font-size: 12px; 
+	margin-bottom: 4px;
+	color: #555555; 
+	font-weight: bold;
+}
+
+a.destination:hover
+{
+	color: #E34113;
+}
+
+
+div.banner 
+{
+  	position: relative;
+	/* border-bottom: 1px solid black; */
+	height: 75px;
+	top: 0px;
+	text-align:center;
+	margin-top: 0px;
+	margin-bottom: 55px;
+/*	overflow-x: hidden; */
+}
+
+.banner_shannon_1 
+{
+	text-align:left;
+ 	bottom: -25px;
+	font-size: 70px;
+	font-weight: bold;
+	color: #999999;
+	margin-left: -50px;
+}
+.banner_psychotherapy_1
+{
+	text-align:center;
+	top: 88px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #555555;
+}
+
+
+.banner_psychotherapy_2
+{
+	text-align: center;
+	font-size: 70px;
+	font-weight: bold;
+
+	color: #cccccc;
+	margin-top: 18px;
+}
+.banner_shannon_2
+{
+	text-align:center;
+
+	font-size: 40px;
+	font-weight: bold;
+	color: #black;
+	margin-top: -28px;
+}
+.banner_image
+{
+	text-align: center;
+	margin-top: 8px;
+	margin-top: -12px;
+}
+
+#metadata
+{
+	position:absolute;
+	left: 0px;
+	top: 190px;
+	width: 280px;
+	text-align: right;
+}
+
+.icon
+{
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 3px;
+}
+
+.icon:hover
+{
+	border-style: solid;
+	padding: 0px;
+	border-width: 3px;
+	border-color: #E34113;
+}
+.no_icon
+{
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 3px;
+}	
+#exhibit
+{
+	position:absolute;
+
+	width: 800px;
+	height: 400px;
+	z-index: -1;
+	background-color: yellow;
+	text-align: center;
+	background-color: white;
+	visibility:hidden;
+}
+exhibit div
+{
+	position: absolute;
+}
+
+.title
+{
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom: 9px;
+}
+#closeIcon
+{
+	border:0;
+	position: relative;
+	vertical-align:middle;
+}
+.p
+{
+	line-height: 170%;
+	padding: 10px 0px 4px 0px;
+
+}
+.holder
+{
+	padding-top: 5px;
+	padding-left: 90px;
+	padding-right: 78px;
+	text-align: left;
+}
+
+.small
+{
+	font-size: 10px;
+
+}
+#footer
+{
+	font-size: 9px;
+
+	bottom: 10px;
+	text-align:center;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+#bottom
+{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+h2
+{
+	margin-bottom: 2px;
+
+}
+td
+{
+	font-size: 12px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-weight: normal;
+}
+.content_title
+{
+	font-size: 25px;
+/*background-color: #EEEE00;*/
+	font-weight: bold;
+	color: #CCCCCC;
+	margin-left: 35px;
+	padding-bottom: 10px;
+}
+.illustrate_left {
+	float: left;
+	margin-right: 30px; 
+	margin-top: 4px; 
+	margin-bottom: 10px;
+	border: 1px solid #555555;
+}
+.illustrate
+{
+	float: right;
+	margin-left: 15px; 
+	margin-top: 4px; 
+	margin-bottom: 10px;
+	border: 1px solid #555555;
+}
+

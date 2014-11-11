@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>shannon + andruid wedding [recreation]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="code/styles/ecologylab/ecologylab.css" rel="stylesheet">
+<link href="includes/wedding.css" rel="stylesheet">
+
+<style type="text/css">
+.show
+{
+	display: block; 
+	text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div class="rootcontainer">
+
+<div  class="mid">
+<table align="center">
+<tr><td>
+<div class="title">
+	shannon + andruid wedding 
+</div>
+<table cellspacing="0" cellpadding="0">
+<tr><td class="navcontainer">
+	<a class="nav" href="index.html">home</a>
+	<a class="nav" href="events.html">events</a>
+	<a class="nav" href="concept.html">concept</a>
+	<a class="nav" href="directions.html">directions</a>
+	<a class="navselected" href="recreation.html">recreation</a>
+	<a class="nav" href="accomodations.html">accomodations</a>
+	</td>
+	<td><img align="center" src="weddingImages/desolation1.jpg"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</div>
+
+<div class="mid" style="align:left;text-align:left">
+		<table cellspacing="3" width="100%">
+		<tr><td colspan="3"><div class="subtitle">[the house]</div></td></tr>
+		<tr align="center" valign="top" style="	font-size: 12px;">
+			<td><img class="show" src="weddingImages/hotTub.jpg">
+		This is the hot tub on the <br/>site of the house.</td>
+			<td><img class="show" src="weddingImages/pool.jpg">
+		This is the assocation's heated pool -- <br/>a short walk from the house.</td>
+			<td><img class="show" src="weddingImages/tennisCourt.jpg">
+		This is the tennis court <br/>behind the house.</td>
+		</tr>
+	
+		<tr><td colspan="3"><div class="subtitle">[recreation]</div></td></tr>
+		<tr valign="top">
+			<td colspan="3" style="padding-left: 25px; font-size: 13px; line-height:135%;">Fun activities in the Lake Tahoe area:<br/>
+Boating, Tennis, Shopping, Golf, Sightseeing, Restaurants, Rafting, Kayaking, Sailing, Waterskiing, Parasailing, Jet Skiing, Swimming, Diving, Windsurfing, Biking, Mountain&nbsp;Biking, Wildlife&nbsp;Viewing, Hiking, Rock&nbsp;Climbing, Horseshoes&nbsp;(in&nbsp;the&nbsp;backyard), Horseback&nbsp;Riding, Hot&nbsp;Air&nbsp;Ballooning, Star&nbsp;Gazing.</td>
+		</tr>
+		<tr valign="top">
+			<td><a class="content_nav" target="_blank" href="http://www.tahoe360.com/flashmaps2/tahoe_recreation.php">recreation guide 1</a>
+				<a class="content_nav" target="_blank" href="http://www.explorer1.com/tahoe/family.htm">recreation guide 2</a>
+				<a class="content_nav" target="_blank" href="http://www.laketahoevacationguide.com/recreation/summer">recreation guide 3</a></td>
+			<td><a class="content_nav" target="_blank" href="http://en.wikipedia.org/wiki/Desolation_Wilderness">hiking in Desolation Wilderness</a></td>
+			<td><a class="content_nav" target="_blank" href="http://www.olympicbikeshop.com/Rentals.html">bike rentals</a></td>
+		</tr>
+		<tr valign="top">
+			<td><a class="content_nav" target="_blank" href=""></a></td>
+			<td><a class="content_nav" target="_blank" href=""></a></td>
+			<td><a class="content_nav" target="_blank" href=""></a></td>
+		</tr>
+			
+	</table>
+
+
+	<div></div>
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp;
+
+
+
+</div>
+</body> </html>

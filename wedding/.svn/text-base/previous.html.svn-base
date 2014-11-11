@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="code/styles/ecologylab/ecologylab.css" rel="stylesheet">
+<link href="includes/wedding.css" rel="stylesheet">
+
+<style type="text/css">
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div class="rootcontainer">
+
+<br clear="all"/>
+
+<div  class="mid">
+<div class="title">
+	shannon + andruid wedding
+</div>
+<div class="navcontainer">
+	<a class="nav" href="directions.html">directions</a>
+</div>
+<img align="left" src="weddingImages/pierReachesOutCrop500.jpg">
+
+
+
+</div>
+<div style="margin-bottom:3px;">
+<b>Andruid</b>
+</div>
+<div style="margin-bottom:3px;">
+
+<b>&amp;</b>
+
+</div>
+<div>
+<b>Shannon Meighan</b>
+
+</div>
+<div style="font-size:15px;">
+Are getting married! 
+</div>
+<br/><br/>
+
+</div>
+
+
+<div>
+
+<div style="padding-bottom:4px;">
+Save the Date!&nbsp;June 20, 2009&nbsp;
+Lake Tahoe, California
+&nbsp;&nbsp;&nbsp;
+Save the Date!&nbsp;June 20, 2009&nbsp;
+Lake Tahoe, California
+</div>
+<div class="field">
+
+<form action="http://spreadsheets.google.com/formResponse?key=p2HMZnkUyI8l0UdWULL6Zag&amp;embedded=true" method="POST" name="weddingResponse">
+
+<input type="hidden" name="entry.9.single" value="" class="ss-q-short" id="entry_9">
+
+<table cellspacing="5">
+		<tr>
+			<td/>
+			<td>* required</td>
+			</tr>
+
+		<tr>
+			<td valign="top">Will you attend? *</td>
+			<td>
+				<input type="radio" name="entry.2.group" value="yes" class="ss-form-input" id="group_2_1"/>yes
+			<input type="radio" name="entry.2.group" value="no" class="ss-form-input" id="group_2_2"/>no
+			
+<!--				<input name="attend" type="checkbox"/>yes
+				<input name="attend" type="checkbox"/>no -->
+			</td>
+		</tr>
+
+	<tr>
+		<td valign="top">Mailing Address for Invitation *</td>
+		<td><textarea name="entry.3.single"  wrap="physical"
+             rows="5" cols="50" id="entry_3"></textarea></td>
+	</tr>
+	<tr>
+		<td valign="top">Contact Phone Number *</td>
+		<td><input size="20" name="entry.4.single" type="text"/></td>
+	</tr>
+	
+		<tr>
+		<td valign="top">Full Names of Attendees *</td>
+		<td><textarea name="entry.5.single"  wrap="physical"
+             rows="5" cols="50"></textarea></td>
+	</tr>
+		<tr>
+		<td valign="top">Remarks</td>
+		<td><textarea name="entry.8.single"  wrap="physical"
+             rows="5" cols="50"></textarea></td>
+</table>
+<br/>
+
+<div align="center"><input type="submit" value="Submit"/></div>
+
+</form>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+// Create a global array that will hold the value of each variable,
+// keyed by the name of the variable.
+var GETDATA = new Array();
+
+// Get the string that follows the "?" in the window's location.
+var sGet = window.location.search;
+if (sGet) // if has a value...
+{
+    // Drop the leading "?"
+    sGet = sGet.substr(1);
+    
+    // Generate a string array of the name value pairs.
+    // Each array element will have the form "foo=bar"
+    var sNVPairs = sGet.split("&");
+    
+    // Now, for each name-value pair, we need to extract
+    // the name and value.
+    for (var i = 0; i < sNVPairs.length; i++)
+    {
+        // So, sNVPairs[i] contains the current element...
+        // Split it at the equals sign.
+        var sNV = sNVPairs[i].split("=");
+        
+        // Assign the pair to the GETDATA array.
+        var sName = sNV[0];
+        var sValue = sNV[1];
+        GETDATA[sName] = sValue;
+    }
+}
+
+// Finally, assign the value to email.
+
+   document.weddingResponse.elements[0].value = GETDATA["email"];
+</SCRIPT>
+
+
+</div>
+
+
+</div>
+<br/>
+<br/>
+
+<div  class="mid">
+<div>
+CAN YOU BELIEVE IT!&nbsp;&nbsp;He proposed…&nbsp;She said,&nbsp;“Yes”!
+&nbsp;&nbsp;&nbsp;
+CAN YOU BELIEVE IT!&nbsp;&nbsp;He proposed…&nbsp;She said,&nbsp;“Yes”!&nbsp;&nbsp;
+
+
+</div>
+<div>
+
+</body> </html>
