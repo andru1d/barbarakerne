@@ -245,3 +245,20 @@ a.destination:hover
 {
 	color: #E34113;
 }
+.illustrate_left 
+{
+	float: left;
+	margin-right: 30px; 
+	margin-top: 4px; 
+	margin-bottom: 10px;
+	border: 1px solid #555555;
+}
+.illustrate_center 
+{
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px; 
+	margin-bottom: 4px;
+	border: 1px solid #555555;
+}

@@ -3,7 +3,7 @@
  */
 var NBSP	= "&nbsp;";
 
-var attrNames	= ["title", "medium", "size", /* "place", */ "date"];
+var attrNames	= ["title", "medium", "size" /*, "place", "date" */];
 
 var closeIcon	= document.createElement("img");
 closeIcon.setAttribute("class", "closeIcon");
@@ -119,6 +119,7 @@ function showMetadata(icon)
 	for (var j = 0; j < attrNames.length; j++)
 	{
 		var label = attrNames[j];
+//		alert(label);
 		tbody.appendChild(metadataPair(label + ":"+ NBSP + NBSP, icon[label], "right", 150));
 	}
 
