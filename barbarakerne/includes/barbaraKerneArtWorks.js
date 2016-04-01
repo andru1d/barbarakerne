@@ -1,0 +1,61 @@
+var paintings = [
+    { title:"Brookmont Kayak Run", medium:"oil on linen", size:"39x39", place:"C &amp; O Canal National Historic Area", date:"2006", icon:"Brookmont Kayak Run.icon.jpg", image:"Brookmont Kayak Run.800.jpg",},
+    { title:"Downriver Great Falls", medium:"oil on linen", size:"39x39", place:"C &amp; O Canal National Historic Area", date:"2006", icon:"Downriver.Great Falls.icon.jpg", image:"Downriver.Great Falls.800.jpg",},
+    { title:"View of Bear Island", medium:"oil on linen", size:"39 x 39", place:"C &amp; O Canal National Historic Area", date:"2006", icon:"View of Bear Island.icon.jpg", image:"View of Bear Island.800.jpg",},
+    { title:"River House", medium:"oil on linen", size:"39 x 39",
+      place:"C &amp; O Canal National Historic Area", date:"2006", icon:"River House.icon.jpg", image:"River House.800.jpg",},
+    { title:"Falling Water, Green", medium:"oil on linen", size:"23x52", place:"Cordillera Central, Puerto Rico", date:"1999",
+      icon:"Falling Water.Green.icon.jpg", image:"Falling Water.Green.800.jpg",},
+    { title:"Falling Water, Red", medium:"oil on linen", size:"25 x 79", place:"Cordillera Central, Puerto Rico", date:"1999", icon:"Falling Water.Red.icon.jpg", image:"Falling Water.Red.800.jpg",},
+
+    { title:"Bridge", medium:"oil on linen", size:"35 x 35", place:"Cwm Idwal Reserve, Wales", date:"1995", icon:"Bridge.icon.jpg", image:"Bridge.800.jpg",},
+
+    { title:"Distant Mountains", medium:"oil on linen", size:"39 x 39", place:"Cwm Idwal Reserve Wales", date:"1995", icon:"Distant Mountains.icon.jpg", image:"Distant Mountains.800.jpg",},
+    { title:"Independence Day", medium:"oil on wood", size:"18 x 59", place:"Cwm Idwal Reserve Wales", date:"1996", icon:"Independence Day.icon.jpg", image:"Independence Day.800.jpg",},
+    { title:"House in the Valley", medium:"oil on linen", size:"39 x 39", place:"Cwn Idwal Reserve Wales", date:"1995", icon:"House in the Valley.icon.jpg", image:"House in the Valley.800.jpg",},
+    { title:"Mountain Tower", medium:"oil on linen", size:"35 x 35", place:"Glastonbury", date:"1995", icon:"Mountain Tower.icon.jpg", image:"Mountain Tower.800.jpg",},
+    { title:"Venus and the Moon", medium:"oil on linen", size:"35 x 35", place:"Glastonbury", date:"1995", icon:"Venus and the Moon.icon.jpg", image:"Venus and the Moon.800.jpg",},
+    { title:"Four Trees", medium:"oil on canvas", size:"18 x 18", place:"Glen Echo Heights", date:"2007", icon:"Four Trees.icon.jpg", image:"Four Trees.800.jpg",},
+    { title:"Tennessee Valley", medium:"oil on canvas", size:"30 x 40", place:"Golden Gate Recreation Area", date:"2007", icon:"Tennessee Valley.icon.jpg", image:"Tennessee Valley.800.jpg",},
+
+    { title:"Rainbow", medium:"oil on linen", size:"39 x 51", place:"Land's End Cornwall", date:"1995", icon:"Rainbow.icon.jpg", image:"Rainbow.800.jpg",},
+    { title:"Homage to the Earth Spirits", medium:"oil on linen", size:"78 x 105", place:"Land's End Cornwall", date:"1995", icon:"Homage to the Earth Spirits.icon.jpg", image:"Homage to the Earth Spirits.800.jpg",},
+    { title:"The Sea, Land's End", medium:"oil on canvas", size:"39 x 39", place:"Land's End Cornwall", date:"1995", icon:"The Sea. Land's End.icon.jpg", image:"The Sea. Land's End.800.jpg",},
+    { title:"Night Village", medium:"oil on linen", size:"25 x 24", place:"Mont Tremblant", date:"2007", icon:"Night Village.icon.jpg", image:"Night Village.800.jpg",},
+    { title:"Mountain Lake", medium:"oil on linen", size:"39 x 39", place:"Point Reyes National Seashore", date:"2007", icon:"Mountain Lake.icon.jpg", image:"Mountain Lake.800.jpg",},
+    { title:"Point Reyes Beach Flowers", medium:"oil on linen", size:"31 x 31", place:"Point Reyes National Seashore", date:"2007", icon:"Point Reyes Beach Flowers.icon.jpg", image:"Point Reyes Beach Flowers.800.jpg",},
+    { title:"Point Reyes Beach Path", medium:"oil on linen", size:"30 x 30", place:"Point Reyes National Seashore", date:"2007", icon:"Point Reyes Beach Path.icon.jpg", image:"Point Reyes Beach Path.800.jpg",},
+    { title:"Red Beach ", medium:"oil on linen", size:"79 x 79", place:"Santorini", date:"1997", icon:"Red Beach.icon.jpg", image:"Red Beach.800.jpg",},
+    { title:"Sun Rising at Sea", medium:"oil on linen", size:"51 x 39", place:"Santorini", date:"1997", icon:"Sun Rising at Sea.icon.jpg", image:"Sun Rising at Sea.800.jpg",},
+    { title:"Star", medium:"oil on linen", size:"79 x 68", place:"Watts Branch", date:"1995", icon:"Star.icon.jpg", image:"Star.800.jpg",},
+    { title:"Heart and Hand", medium:"oil on linen", size:"35 x 35", place:"Watts Branch", date:"2007", icon:"Heart and Hand.icon.jpg", image:"Heart and Hand.800.jpg",}
+];
+
+var prints =
+[
+    { title:"River House", medium:"woodcut, artist made paper", size:"25 x 23", date:"2000", icon:"30. River House icon.jpg", image:"30. River House 800.jpg",},
+    { title:"River House #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2000", icon:"31. River House 2 icon.jpg", image:"31. River House 2 800.jpg",},
+    { title:"Journey to Immortality", medium:"woodcut", size:"21 x 17", date:"2006", icon:"32. Jouney to Immortality icon.jpg", image:"32. Journey to Immortality 800.jpg",},
+    { title:"Red Kestrel", medium:"woodcut, collage", size:"11 x 14", date:"2006", icon:"33. Red Kestrel icon.jpg", image:"33. Red Kestrel 800.jpg",},
+    { title:"gray",},
+    { title:"gray",},
+    { title:"Herons Flying Home", medium:"woodcut, artist made paper", size:"25 x 23", date:"2003", icon:"36. Herons Flying Home icon.jpg", image:"36. Herons Flying Home 800.jpg",},
+    { title:"Herons Flying Home #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2003", icon:"37. Herons Flying Home 2 icon.jpg", image:"37. Herons Flying Home 2 800.jpg",},
+    { title:"Mountain Midnight #2", medium:"woodcut, pulp painting", size:"31 x 24", date:"1998", icon:"38. Mountain Midnight 2 icon.jpg", image:"38. Mountain Midnight 2 800.jpg",},
+    { title:"Mountain Midnight", medium:"woodcut, artist made paper, hand coloring", size:"31 x 24", date:"1998", icon:"39. Mountain Midnight icon.jpg", image:"39. Mountain Midnight 800.jpg",},
+    { title:"Falling Water #2", medium:"woodcut, pulp painting", size:"31 x 24", date:"1997", icon:"40. Falling Water 2 icon.jpg", image:"40. Falling Water 2 800.jpg",},
+    { title:"Falling Water", medium:"woodcut,artist made paper, hand coloring", size:"31 x 24", date:"1997", icon:"41. Falling Water icon.jpg", image:"41. Falling Water 800.jpg",},
+    { title:"gray",},
+    { title:"Mountain Dove", medium:"woodcut, artist made paper", size:"25 x 23", date:"2001", icon:"43. Mountain Dove icon.jpg", image:"43. Mountain Dove 800.jpg",},
+    { title:"Mountain Dove #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2001", icon:"44. Mountain Dove 2 icon.jpg", image:"44. Mountain Dove 2 800.jpg",},
+    { title:"Tender is the Night", medium:"woodcut, hand coloring", size:"14 x 11", date:"1999", icon:"45. Tender is the Night icon.jpg", image:"45. Tender is the Night 800.jpg",},
+    { title:"Linden Oak", medium:"woodcut", size:"25 x 23", date:"2000", icon:"46. Linden Oak icon.jpg", image:"46. Linden Oak 800.jpg",},
+    { title:"Earth Spirits", medium:"woodcut", size:"30 x 40", date:"1995", icon:"47. Earth Spirits icon.jpg", image:"47. Earth Spirits 800.jpg",},
+    { title:"Earth Spirits, Day", medium:"woocut, pulp painting", size:"30 x 40", date:"1995", icon:"48. Earth Spirits Day icon.jpg", image:"48. Earth Spirits Day 800.jpg",},
+    { title:"Earth Spirits, Night", medium:"woodcut, pulp painting", size:"30 x 40", date:"1996", icon:"49. Earth Spirits Night icon.jpg", image:"49. Earth Spirits Night 800.jpg",},
+    { title:"Silver &amp; Gold", medium:"woodcut, hand coloring", size:"15 x 38", date:"2005", icon:"50. Silver Gold icon.jpg", image:"50. Silver Gold 800.jpg",},
+    { title:"House in the Clouds #2", medium:"woodcut, pulp paintiing", size:"31 x 24", date:"1999", icon:"51. House in the Clouds 2 icon.jpg", image:"51. House in the Clouds 2 800.jpg",},
+    { title:"House in the Clouds", medium:"woodcut, artist made paper, hand coloring", size:"31 x 24", date:"1999", icon:"52. House in the Clouds icon.jpg", image:"52. House in the Clouds 800.jpg",},
+    { title:"gray",},
+    { title:"Night Peony", medium:"woodcut ", size:"21 x 17", date:"2008", icon:"54. Night Peony icon.jpg", image:"54. Night Peony 800.jpg",}
+];

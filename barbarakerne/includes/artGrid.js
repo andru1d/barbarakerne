@@ -26,19 +26,14 @@ var iconGrid	= [new Array(5), new Array(5), new Array(5), new Array(5), new Arra
 
 var GRAY		= "gray";
 
-function buildGrid()
+function buildGrid(works, collection)
 {
-    var xml = loadXML("barbaraKerneImages.xml");
-    //alert(xml);
-    
-    var paintings = xml.getElementsByTagName(collection);
-  
     var body = document.body;
     
     var rootContainer = document.getElementById("grid");
     var x=0, y=0;
 	
-    for (var i = 0; i < paintings.length; i++) 
+    for (var i = 0; i < works.length; i++) 
 	{
         if ((i > 0) && ((i % 5) == 0)) 
 		{
@@ -48,11 +43,11 @@ function buildGrid()
 			x	= 0;
         }
 
-        var thatPainting	= paintings[i];
+        var thatPainting	= works[i];
 		var thatIcon		 = document.createElement("img");
 		thatIcon.className = "icon";
 			
-		if (thatPainting.getAttribute("title") == "gray") 
+		if (thatPainting.title == "gray") 
 		{
 			thatIcon.src	= "prints/icons/gray.png";
 			thatIcon.setAttribute("class", "no_icon");
@@ -66,10 +61,10 @@ function buildGrid()
 					mapAttr(thatPainting, label, thatIcon);
 			}
 			
-			thatIcon.src = collection + "s/icons/" + thatPainting.getAttribute("icon"); // create referentiality!!!
-			//	thatIcon.setAttribute("image", thatPainting.getAttribute("image"));
-			thatIcon.image = thatPainting.getAttribute("image");
-			thatIcon.title = thatPainting.getAttribute("title");
+			thatIcon.src = collection + "s/icons/" + thatPainting.icon; // create referentiality!!!
+			//	thatIcon.setAttribute("image", thatPainting.image);
+			thatIcon.image = thatPainting.image;
+			thatIcon.title = thatPainting.title;
 			
 			thatIcon.onmouseover = function(){
 				showMetadata(this);
@@ -78,7 +73,7 @@ function buildGrid()
 				hideMetadata(this);
 			};
 			thatIcon.onmousedown = function(){
-				showImage(this);
+				showImage(this, collection);
 			};
 		}
 
@@ -96,7 +91,7 @@ function buildGrid()
 
 function mapAttr(thatPainting, name, thatIcon)
 {
-		var value			= thatPainting.getAttribute(name);
+		var value			= thatPainting[name];
 		if (value)
 			thatIcon[name]		= value.replace(/ /g, NBSP);
 }
@@ -140,7 +135,7 @@ function hideMetadata(icon)
 
 function showImage(thatIcon)
 {
-	var src = collection + "s/images/" + thatIcon.painting.getAttribute("image");
+	var src = collection + "s/images/" + thatIcon.painting.image;
 	exhibitImg.setAttribute("src", src);
 	
 	title.innerHTML	= thatIcon.title;
