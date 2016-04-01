@@ -28,6 +28,8 @@ var GRAY		= "gray";
 
 function buildGrid(works, collection)
 {
+    metadataDiv     = document.getElementById("metadata");
+    
     var body = document.body;
     
     var rootContainer = document.getElementById("grid");
@@ -37,8 +39,8 @@ function buildGrid(works, collection)
 	{
         if ((i > 0) && ((i % 5) == 0)) 
 		{
-            var br = document.createElement("br");
-            rootContainer.appendChild(br);
+//            var br = document.createElement("br");
+//            rootContainer.appendChild(br);
 			y++;
 			x	= 0;
         }
@@ -65,12 +67,14 @@ function buildGrid(works, collection)
 			//	thatIcon.setAttribute("image", thatPainting.image);
 			thatIcon.image = thatPainting.image;
 			thatIcon.title = thatPainting.title;
+            
+            thatIcon.showing    = false;
 			
 			thatIcon.onmouseover = function(){
-				showMetadata(this);
+				showMetadata(event, this);
 			};
 			thatIcon.onmouseout = function(){
-				hideMetadata(this);
+				hideMetadata(event, this);
 			};
 			thatIcon.onmousedown = function(){
 				showImage(this, collection);
@@ -96,41 +100,63 @@ function mapAttr(thatPainting, name, thatIcon)
 			thatIcon[name]		= value.replace(/ /g, NBSP);
 }
 
-function metadataDiv()
+var metadataDiv;
+
+var currentIcon;
+
+function showMetadata(event, icon)
 {
-	return document.getElementById("metadata");
+    if (!icon.showing && (currentIcon != icon))
+    {
+        icon.showing        = true;
+        currentIcon         = icon;
+        var table			= document.createElement("table");
+        table.setAttribute("border", 0);
+        table.setAttribute("cellspacing", 2);
+    //	table.setAttribute("width", "100%")
+        var tbody			= document.createElement("tbody");
+    //	alert(icon);
+        table.appendChild(tbody);
+
+        for (var j = 0; j < attrNames.length; j++)
+        {
+            var label = attrNames[j];
+    //		alert(label);
+            tbody.appendChild(metadataPair(label + ":"+ NBSP + NBSP, icon[label], "right", 150));
+        }
+
+        var leftIcon		= iconGrid[0][icon.yGrid];
+        metadataDiv.style.top	= leftIcon.offsetTop + "px";
+        metadataDiv.appendChild(table);
+        var newLeft			= leftIcon.offsetLeft - table.offsetWidth - 17;
+    //	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + newLeft);
+        metadataDiv.style.left	= newLeft + "px";
+    //	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + thatDiv.offsetLeft);        
+        metadataDiv.style.visibility='visible'
+    }
 }
 
-function showMetadata(icon)
+function hideMetadata(event, icon)
 {
-	var table			= document.createElement("table");
-	table.setAttribute("border", 0);
-	table.setAttribute("cellspacing", 2);
-//	table.setAttribute("width", "100%")
-	var tbody			= document.createElement("tbody");
-//	alert(icon);
-	table.appendChild(tbody);
-	
-	for (var j = 0; j < attrNames.length; j++)
-	{
-		var label = attrNames[j];
-//		alert(label);
-		tbody.appendChild(metadataPair(label + ":"+ NBSP + NBSP, icon[label], "right", 150));
-	}
-
-	var thatDiv			= metadataDiv();
-	var leftIcon		= iconGrid[0][icon.yGrid];
-	thatDiv.style.top	= leftIcon.offsetTop + "px";
-	thatDiv.appendChild(table);
-	var newLeft			= leftIcon.offsetLeft - table.offsetWidth - 17;
-//	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + newLeft);
-	thatDiv.style.left	= newLeft + "px";
-//	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + thatDiv.offsetLeft);
-}
-
-function hideMetadata(icon)
-{
-	metadataDiv().innerHTML	= "";
+    if (icon.showing && (currentIcon == icon))
+    {
+        var iconLeft    = icon.x;
+        var iconTop     = icon.y;
+        if (!((iconLeft < event.x) && (iconLeft + icon.width > event.x) && (iconTop < event.y) && (iconTop + icon.width > event.y)))
+        {
+            metadataDiv.style.visibility='hidden'
+            //metadataDiv().innerHTML	= "";
+            while (true)
+            {
+                var last = metadataDiv.lastChild;
+                if (!last)
+                    break;
+                metadataDiv.removeChild(last);
+            }
+            icon.showing    = false;
+            currentIcon     = null;
+        }
+    }
 }
 
 function showImage(thatIcon)

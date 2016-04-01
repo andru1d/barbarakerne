@@ -10,7 +10,7 @@ body
 	vertical-align: top;
 
 	margin: 0px 30px 0px 30px;
-	padding: 0px 0px 0px 0px;
+	padding: 15px 100px 0px 100px;
 }
 
 td
@@ -42,7 +42,7 @@ p
   	background-color: #ffffff; 
 	background: #ffffff url(1x1.gif) repeat-y 50% 0;
 
-	padding: 15px 100px 0px 100px;
+/*	padding: 15px 100px 0px 100px;*/
 	margin-right: auto;
 	margin-left: auto; 	/* opera does not like 'margin:20px auto' */
 
@@ -63,7 +63,8 @@ p
 #grid
 {
 	text-align: center;
-	
+	width: 400px;
+    margin: 0 auto;
 }
 
 .nav_block
@@ -135,6 +136,7 @@ span.banner3 {
 	top: 190px;
 	width: 280px;
 	text-align: right;
+    visibility: hidden;
 }
 
 .icon
