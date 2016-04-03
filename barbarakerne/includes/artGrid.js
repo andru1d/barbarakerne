@@ -19,57 +19,61 @@ var title	= document.createElement("div");
 title.setAttribute("class", "title");
 
 var exhibitImg	= document.createElement("img");
-	
+
 var bottom, footer;
 
-var iconGrid	= [new Array(5), new Array(5), new Array(5), new Array(5), new Array(5)];
+var ICON_DIM	= 5;
+var METADATA_PADDING	= 10;
+
+var iconGrid	= [new Array(ICON_DIM), new Array(ICON_DIM), new Array(ICON_DIM), new Array(ICON_DIM), new Array(ICON_DIM)];
 
 var GRAY		= "gray";
 
 function buildGrid(works, collection)
 {
     metadataDiv     = document.getElementById("metadata");
-    
+		metadataDiv.style.width	= "0px";
+
     var body = document.body;
-    
+
     var rootContainer = document.getElementById("grid");
     var x=0, y=0;
-	
-    for (var i = 0; i < works.length; i++) 
+
+    for (var i = 0; i < works.length; i++)
 	{
-        if ((i > 0) && ((i % 5) == 0)) 
-		{
+        if ((i > 0) && ((i % ICON_DIM) == 0))
+				{
 //            var br = document.createElement("br");
 //            rootContainer.appendChild(br);
-			y++;
-			x	= 0;
+					y++;
+					x	= 0;
         }
 
-        var thatPainting	= works[i];
+    var thatPainting	= works[i];
 		var thatIcon		 = document.createElement("img");
 		thatIcon.className = "icon";
-			
-		if (thatPainting.title == "gray") 
+
+		if (thatPainting.title == "gray")
 		{
 			thatIcon.src	= "prints/icons/gray.png";
 			thatIcon.setAttribute("class", "no_icon");
 		}
-		else 
+		else
 		{
 			thatIcon.painting = thatPainting;
 			for (var j = 0; j < attrNames.length; j++) {
 				var label = attrNames[j];
-				if (thatPainting) 
+				if (thatPainting)
 					mapAttr(thatPainting, label, thatIcon);
 			}
-			
+
 			thatIcon.src = collection + "s/icons/" + thatPainting.icon; // create referentiality!!!
 			//	thatIcon.setAttribute("image", thatPainting.image);
 			thatIcon.image = thatPainting.image;
 			thatIcon.title = thatPainting.title;
-            
+
             thatIcon.showing    = false;
-			
+
 			thatIcon.onmouseover = function(){
 				showMetadata(event, this);
 			};
@@ -88,7 +92,7 @@ function buildGrid(works, collection)
     }
 	bottom	= document.getElementById("bottom");
 	footer	= document.getElementById("footer");
-	
+
 	var cNameDiv	= document.getElementById("collection_name");
 	cNameDiv.innerHTML = "P" + collection.substring(1) + "s";
 }
@@ -97,7 +101,7 @@ function mapAttr(thatPainting, name, thatIcon)
 {
 		var value			= thatPainting[name];
 		if (value)
-			thatIcon[name]		= value.replace(/ /g, NBSP);
+			thatIcon[name]		= value;
 }
 
 var metadataDiv;
@@ -111,7 +115,7 @@ function showMetadata(event, icon)
         icon.showing        = true;
         currentIcon         = icon;
         var table			= document.createElement("table");
-        table.setAttribute("border", 0);
+//        table.setAttribute("border", 1);
         table.setAttribute("cellspacing", 2);
     //	table.setAttribute("width", "100%")
         var tbody			= document.createElement("tbody");
@@ -122,16 +126,24 @@ function showMetadata(event, icon)
         {
             var label = attrNames[j];
     //		alert(label);
-            tbody.appendChild(metadataPair(label + ":"+ NBSP + NBSP, icon[label], "right", 150));
+            tbody.appendChild(metadataPair(label, icon[label], "right", 150));
         }
 
-        var leftIcon		= iconGrid[0][icon.yGrid];
-        metadataDiv.style.top	= leftIcon.offsetTop + "px";
-        metadataDiv.appendChild(table);
-        var newLeft			= leftIcon.offsetLeft - table.offsetWidth - 17;
+				metadataDiv.style.top	= icon.offsetTop + "px";
+				metadataDiv.appendChild(table);
+				var metadataX;
+				if (icon.xGrid < 2)
+				{
+	        var leftIcon		= iconGrid[0][icon.yGrid];
+	        metadataX				= leftIcon.offsetLeft - table.offsetWidth - METADATA_PADDING;
+				}
+				else {
+					var rightIcon		= iconGrid[ICON_DIM - 1][icon.yGrid];
+					metadataX				= rightIcon.offsetLeft + rightIcon.offsetWidth + METADATA_PADDING;
+				}
     //	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + newLeft);
-        metadataDiv.style.left	= newLeft + "px";
-    //	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + thatDiv.offsetLeft);        
+        metadataDiv.style.left	= metadataX + "px";
+    //	alert("yo! " + leftIcon.offsetLeft +","+table.offsetWidth + "," + thatDiv.offsetLeft);
         metadataDiv.style.visibility='visible'
     }
 }
@@ -142,7 +154,8 @@ function hideMetadata(event, icon)
     {
         var iconLeft    = icon.x;
         var iconTop     = icon.y;
-        if (!((iconLeft < event.x) && (iconLeft + icon.width > event.x) && (iconTop < event.y) && (iconTop + icon.width > event.y)))
+//        if (!((iconLeft < event.x) && (iconLeft + icon.width > event.x) && (iconTop < event.y) && (iconTop + icon.width > event.y)))
+				if (true)
         {
             metadataDiv.style.visibility='hidden'
             //metadataDiv().innerHTML	= "";
@@ -163,11 +176,11 @@ function showImage(thatIcon)
 {
 	var src = collection + "s/images/" + thatIcon.painting.image;
 	exhibitImg.setAttribute("src", src);
-	
+
 	title.innerHTML	= thatIcon.title;
-	
+
 	var exhibit	= document.getElementById("exhibit");
-	
+
 	if (exhibit.firstChild == null)
 	{
 		exhibit.appendChild(closeA);
@@ -185,38 +198,36 @@ function closeImage()
 {
 	var exhibit	= document.getElementById("exhibit");
 
-//	exhibit.removec	
+//	exhibit.removec
 	exhibit.style.zIndex	= -1;
 	exhibitImg.src			= null;
 	exhibitImg.setAttribute("src", null);
-	
+
 	exhibit.style.visibility= "hidden";
 	exhibit.removeChild(footer);
 	bottom.appendChild(footer);
 	bottom.style.visibility	= "visible";
 }
 
-function metadataPair(label, value, labelAlign, labelWidth)
+function metadataPair(label, value)
 {
 	var thatTD	= document.createElement("td");
-	if (labelAlign) 
-	{
-		thatTD.setAttribute("align", labelAlign);
-		thatTD.setAttribute("style", "font-weight: normal;");
-	}
-	if (false)
-	{
-		thatTD.setAttribute("width", labelWidth);
-	}
-	thatTD.innerHTML	= label;
+	thatTD.style.align	= "right";
+	thatTD.innerHTML		= label + NBSP;
 
 	var thatTR			= document.createElement("tr");
-	thatTR.setAttribute("valign", "top");
+	thatTR.style.align	= "left";
 	thatTR.appendChild(thatTD);
+
 	thatTD	= document.createElement("td");
+//	thatTD.style.align			= "left";
 	thatTD.setAttribute("align", "left");
-	thatTD.innerHTML	= value;
+	thatTD.style.fontStyle	= "italic";
+	if (label == "title")
+			thatTD.style.fontWeight	= "bold";
+	thatTD.innerHTML				= value;
+
 	thatTR.appendChild(thatTD);
-	
+
 	return thatTR;
 }
