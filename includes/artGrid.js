@@ -80,7 +80,7 @@ function buildGrid(works, collection)
 			thatIcon.onmouseout = function(){
 				hideMetadata(event, this);
 			};
-			thatIcon.onmousedown = function(){
+			thatIcon.onclick = function(){
 				showImage(this, collection);
 			};
 		}
@@ -200,8 +200,8 @@ function closeImage()
 
 //	exhibit.removec
 	exhibit.style.zIndex	= -1;
-	exhibitImg.src			= null;
-	exhibitImg.setAttribute("src", null);
+	exhibitImg.src			= "";
+//	exhibitImg.setAttribute("src", null);
 
 	exhibit.style.visibility= "hidden";
 	exhibit.removeChild(footer);
