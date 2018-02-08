@@ -15,6 +15,14 @@ var closeA		= document.createElement("a");
 closeA.setAttribute("href", "javascript:closeImage();");
 closeA.appendChild(closeIcon);
 
+document.onkeydown = function (evt) {
+    if (("key" in evt) && (evt.key == "Escape" || evt.key == "Esc"))
+      {
+          closeImage();
+      }
+};
+
+
 var title	= document.createElement("div");
 title.setAttribute("class", "title");
 
@@ -197,18 +205,22 @@ function showImage(thatIcon)
 function closeImage()
 {
 	var exhibit	= document.getElementById("exhibit");
-
+    if (exhibitImg && exhibitImg.src != "")
+    {
 //	exhibit.removec
-	exhibit.style.zIndex	= -1;
-	exhibitImg.src			= "";
-//	exhibitImg.setAttribute("src", null);
-
-	exhibit.style.visibility= "hidden";
-	exhibit.removeChild(footer);
-	bottom.appendChild(footer);
-	bottom.style.visibility	= "visible";
+        exhibit.style.zIndex	= -1;
+        exhibitImg.src			= "";
+ 
+        exhibit.style.visibility= "hidden";
+        exhibit.removeChild(footer);
+        bottom.appendChild(footer);
+        bottom.style.visibility	= "visible"; 
+    }
 }
-
+function handleKey() 
+{
+    
+}
 function metadataPair(label, value)
 {
 	var thatTD	= document.createElement("td");

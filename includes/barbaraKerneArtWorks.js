@@ -33,19 +33,21 @@ var paintings = [
 
 var prints =
 [
+    { title:"New World", medium:"woodcut", size:"23 x 19", date:"", icon:"New World 72.jpg", image:"New World 800.jpg",},
+    { title:"To Life", medium:"woodcut", size:"20 x 25", date:"", icon:"To Life 72.jpg", image:"To Life 800.jpg",},
+    { title:"Moving Within", medium:"woodcut", size:"12&#189; x 12&#189;", date:"", icon:"Moving Within 72.jpg", image:"Moving Within 800.jpg",},
+    { title:"Lovers", medium:"woodcut", size:"23 x 19", date:"", icon:"Lovers 72.jpg", image:"Lovers 800.jpg",},
     { title:"River House", medium:"woodcut, artist made paper", size:"25 x 23", date:"2000", icon:"30. River House icon.jpg", image:"30. River House 800.jpg",},
     { title:"River House #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2000", icon:"31. River House 2 icon.jpg", image:"31. River House 2 800.jpg",},
     { title:"Journey to Immortality", medium:"woodcut", size:"21 x 17", date:"2006", icon:"32. Jouney to Immortality icon.jpg", image:"32. Journey to Immortality 800.jpg",},
     { title:"Red Kestrel", medium:"woodcut, collage", size:"11 x 14", date:"2006", icon:"33. Red Kestrel icon.jpg", image:"33. Red Kestrel 800.jpg",},
-    { title:"gray",},
-    { title:"gray",},
+//    { title:"gray",},
     { title:"Herons Flying Home", medium:"woodcut, artist made paper", size:"25 x 23", date:"2003", icon:"36. Herons Flying Home icon.jpg", image:"36. Herons Flying Home 800.jpg",},
     { title:"Herons Flying Home #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2003", icon:"37. Herons Flying Home 2 icon.jpg", image:"37. Herons Flying Home 2 800.jpg",},
     { title:"Mountain Midnight #2", medium:"woodcut, pulp painting", size:"31 x 24", date:"1998", icon:"38. Mountain Midnight 2 icon.jpg", image:"38. Mountain Midnight 2 800.jpg",},
     { title:"Mountain Midnight", medium:"woodcut, artist made paper, hand coloring", size:"31 x 24", date:"1998", icon:"39. Mountain Midnight icon.jpg", image:"39. Mountain Midnight 800.jpg",},
     { title:"Falling Water #2", medium:"woodcut, pulp painting", size:"31 x 24", date:"1997", icon:"40. Falling Water 2 icon.jpg", image:"40. Falling Water 2 800.jpg",},
     { title:"Falling Water", medium:"woodcut,artist made paper, hand coloring", size:"31 x 24", date:"1997", icon:"41. Falling Water icon.jpg", image:"41. Falling Water 800.jpg",},
-    { title:"gray",},
     { title:"Mountain Dove", medium:"woodcut, artist made paper", size:"25 x 23", date:"2001", icon:"43. Mountain Dove icon.jpg", image:"43. Mountain Dove 800.jpg",},
     { title:"Mountain Dove #2", medium:"woodcut, pulp painting", size:"25 x 23", date:"2001", icon:"44. Mountain Dove 2 icon.jpg", image:"44. Mountain Dove 2 800.jpg",},
     { title:"Tender is the Night", medium:"woodcut, hand coloring", size:"14 x 11", date:"1999", icon:"45. Tender is the Night icon.jpg", image:"45. Tender is the Night 800.jpg",},
@@ -56,6 +58,5 @@ var prints =
     { title:"Silver &amp; Gold", medium:"woodcut, hand coloring", size:"15 x 38", date:"2005", icon:"50. Silver Gold icon.jpg", image:"50. Silver Gold 800.jpg",},
     { title:"House in the Clouds #2", medium:"woodcut, pulp paintiing", size:"31 x 24", date:"1999", icon:"51. House in the Clouds 2 icon.jpg", image:"51. House in the Clouds 2 800.jpg",},
     { title:"House in the Clouds", medium:"woodcut, artist made paper, hand coloring", size:"31 x 24", date:"1999", icon:"52. House in the Clouds icon.jpg", image:"52. House in the Clouds 800.jpg",},
-    { title:"gray",},
     { title:"Night Peony", medium:"woodcut ", size:"21 x 17", date:"2008", icon:"54. Night Peony icon.jpg", image:"54. Night Peony 800.jpg",}
 ];

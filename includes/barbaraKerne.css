@@ -228,6 +228,10 @@ h2
 	margin-bottom: 2px;
 
 }
+.selected
+{
+    font-size: 10pt;
+}
 td
 {
 	font-size: 12px;
